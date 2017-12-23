@@ -18,7 +18,7 @@
 
 **D**: The differential coefficient is used to solve the overshooting problem due to high oscilation, as state above. By updating the `TotalError` function in `PID.ccp` with `-Kp * p_error - Kd * d_error` the vehicle will oscilate less and won't overshoot. This can be understood as a counter steer to avoid overshooting of the proportional error.
 
-**I**: The integral coefficient is a way to account for biases, such as a wheels being misaligned to one side. In this implementation, the integral part has no effect, since no biases are present in the simulator. The integral is included in the `TotalError` function in `PID.ccp` as `-Kp * p_error - Kd * d_error - Ki * i_error`
+**I**: The integral coefficient is a way to account for biases, such as a wheels being misaligned to one side. In this implementation the integral part has no effect since no biases are present in the simulator. The integral is included in the `TotalError` function in `PID.ccp` as `-Kp * p_error - Kd * d_error - Ki * i_error`
 
 
 ## Choice of hyperparameters
